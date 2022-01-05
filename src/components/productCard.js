@@ -8,9 +8,11 @@ dayjs.locale("ko");
 
 function ProductCard(props) {
   const product = props.product;
+
   return (
     <div className="product-card">
       {product.soldout === 1 && <div className="product-blur" />}
+
       <Link
         style={{ color: "inherit" }}
         className="product-link"
@@ -19,9 +21,12 @@ function ProductCard(props) {
         <div>
           <img className="product-img" src={`${API_URL}/${product.imageUrl}`} />
         </div>
+
         <div className="product-contents">
           <span className="product-name">{product.name}</span>
+
           <span className="product-price">{product.price}원</span>
+
           <div className="product-footer">
             <div className="product-seller">
               <img className="product-avatar" src="/images/icons/avatar.png" />
